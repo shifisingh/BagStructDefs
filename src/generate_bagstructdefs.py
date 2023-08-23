@@ -1106,38 +1106,7 @@ def main():
     data = RosbagDiveData(vehicleName, dataDir, mode)
     defs = BagStructDefs(vehicleName, dataDir, data)
 
-    print("Cruises:")
-    for cruise in data.get_cruises():
-            print(cruise)
-    print("Dives:")
-    for dive in data.get_dives():
-            print(dive)
-    print('\n\nPrinting bag def info')
-    for key, value in defs.get_bags().items():
-      print(f"\nNamespace: {key}")
-      print(value.head(500))
-    print('\n\nPrinting struct def info')
-    for key, value in defs.get_structs().items():
-        print(f"\nNamespace: {key}")
-        print(value)
-    print('\n\nPrinting struct field info')
-    for key, value in defs.get_structFields().items():
-        print(f"\nStruct: {key}")
-        print('this is length of struct field dict ' + str(len(value[1])))
-        print(f"Type: {value[0]}")
-        print(f"Fields: {value[1]}")
-    print('\n\nThis is complete set of field types for this configuration')
-    fieldSet = set()
-    for key, value in defs.get_structFields().items():
-        for fields in value[1]:
-            fieldSet.add(fields[0])
-    print(fieldSet)
-    print('\n\nPrinting struct fields fully unwrapped')
-    for key, value in defs.get_structFieldsUnwrapped().items():
-        print(f"\n\nStruct:{key}")
-        print('this is length of list of lists: ' + str(len(value)))
-        print(f"\n\nUnwrapped:")
-        print(value)
+  
     populate_Bags(defs)
     populate_structs(defs)
 
