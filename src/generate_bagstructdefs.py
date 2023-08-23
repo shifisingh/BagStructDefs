@@ -809,11 +809,6 @@ class RosbagDiveData:
         # turn list of lists into list
         flattenedDives = [item for sublist in dives for item in sublist]
 
-        # hard coding (sorry) a fix to a permission denied error 
-        if '/mnt/vastshare/NewHierarchy/Sentry/2022/2022-boettcher/dives/sentry626/nav-sci/raw/rosbag' in flattenedDives:
-            flattenedDives.remove('/mnt/vastshare/NewHierarchy/Sentry/2022/2022-boettcher/dives/sentry626/nav-sci/raw/rosbag')
-        print('this is flattened dives')
-        print(flattenedDives)
         return flattenedDives
     
 
