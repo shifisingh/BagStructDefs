@@ -15,9 +15,8 @@ in the form of .yaml configuration files.
 
 Depending on the level of granularity specified by the user on the command line, the script pulls an intelligent
 selection of ROS data, pipes the output of running necessary ROS commands on this data into .txt files, and then 
-parses information from those files, setting off a cascade of object instantiation and manipulation.
-Relevant information is also parsed from standard ROS .msg definitions and custom NDSF ROS .msg definitions, which also 
-aid in object instantiation. 
+parses information from those files, setting off a cascade of object instantiation and manipulation. Relevant information 
+is also parsed from standard ROS .msg definitions and custom NDSF ROS .msg definitions. 
 
 ## Notes
 There are a few interesting complexities to the data. Many .msg definition contain nested .msg definitions, meaning 
