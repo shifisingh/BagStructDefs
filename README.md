@@ -31,8 +31,7 @@ for the structs to populate.
 Automation for struct defs is less straightforward than automation for bag defs because there exist inconsistencies
 between .msg def files and what should get populated to the .yaml configuration files. Said differently, there does not
 exist an exact one-to-one ratio of .msg definitions to .yaml config files. A more interactive process was thus designed, 
-handling known custom types automatically, and flagging potentially custom types and asking the user
-for input on these flagged types. 
+building support to handle known custom types automatically, and asking for user input on types flagged as potentially custom. 
 
 The resulting populate_struct method has grown more complex than was originally anticipated
 and the next version will introduce a new object for all the populate subprocesses to reside in.
