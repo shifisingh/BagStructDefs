@@ -2,7 +2,7 @@
 
 ## Permissions
 generate_bagstructdefs.py is a script which aids in vehicle post dive processing within the National Deep Submergence Facility.
-It has been reproduced for a personal repository with permission from Woods Hole Oceanographic Institution.
+It has been reproduced for a personal repository with permission from Woods Hole Oceanographic Institution. 
 
 ## Rationale 
 NDSF is home to three underwater vehicles: Jason, Alvin, and Sentry. This script was written as part of a larger effort within the facility to move towards unification of vehicle post dive processing for three vehicles into one single pipeline.  
@@ -20,6 +20,8 @@ There exists terabytes of ROS data on the NDSF servers. To keep the script fast,
 Automation for struct defs is less straightforward than automation for bag defs because there exist inconsistencies between .msg def files and what should get populated to the .yaml configuration files. Said differently, there does not exist an exact one-to-one ratio of .msg definitions to .yaml config files. A more interactive process was thus designed, building support to handle known custom types automatically, and asking for user input on types flagged as potentially custom. 
 
 ## Future Work 
+The script is still in development. 
+
 The populate_struct method has grown more complex than was originally anticipated and the next version will introduce a new object for all the populate subprocesses to reside in, effectively serving as a front-end configuration. 
 
 A new object will be created which houses the necessary paths to .msg files, as a cleaner and less machine specific alternative to the current hardcoded paths. This also allows for easily maintainable support as new drivers/nodes are added, particularly in the world of Sentry.  
