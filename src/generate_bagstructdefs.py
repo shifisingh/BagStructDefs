@@ -19,18 +19,14 @@
 # certain topics end in vehicle name or primitive type i.e. sonardyne, create filter
 # (probably in backend) method to handle such cases 
 
-# develop cleaner ways of path traversal for .msg, workspace, dslpp (idea -- MsgPath() object
-# which instantiated from user input)
+# develop cleaner ways of path traversal for .msg, workspace, dslpp (MsgPaths() object
+# which tries various paths and if fails, instantiated from user input)
 
 # new populate_bag method needs to be tested and then switched out with old method 
 # switch order of topic/def, add newline (non trivial to implement bc of .yaml load / 
 # python dict properties)
 
-# populate_Struct method needs to be developed 
-
 # add type checks for parameters 
-
-# add support for sentry struct_def autogeneration (probably just some more msgpath variables)
 
 # add more informative error catching 
 
@@ -44,8 +40,8 @@
 
 # continue to add support for special types
 
-# may make sense to add a class to represent command line interface
-# as populate methods become more complex 
+# add a class to represent command line interface
+# as populate methods have become more complex 
 
 import argparse
 from collections import OrderedDict
