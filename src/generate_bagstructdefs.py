@@ -526,11 +526,7 @@ class BagStructDefs():
         # curAbsPath will not include digits 
         curAbsPath = self.createPath(curMiniPath)
         curArrayDigitString = self.processArrayNotation(curMiniPath)[1]
-        print('cur mini path is ' + curMiniPath)
-        print('cur name is ' + curName)
-        print('cur rel dir is ' + relDir)
-        print('cur abs path is ' + curAbsPath)
-        print('cur digit array string is ' + curArrayDigitString)
+    
         
         # if the indvTuple is nested (i.e. 'std_msgs/Header', 'header'), create containers 
         # for new subfields, populate containers, 
