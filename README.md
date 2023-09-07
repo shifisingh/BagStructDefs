@@ -25,3 +25,5 @@ The script is still in development.
 The populate_struct method has grown more complex than was originally anticipated and the next version will introduce a new object for all the populate subprocesses to reside in, effectively serving as a front-end configuration. 
 
 A new object will be created which houses the necessary paths to .msg files, as a cleaner and less machine specific alternative to the current hardcoded paths. This also allows for easily maintainable support as new drivers/nodes are added, particularly in the world of Sentry.  
+
+Currently, the code is housed in a singular file but split into different classes. This allows for ease in running the script from the Linux command line. Future work includes splitting each class into a seperate .py file and using a third party tool to compile the multiple .py files into one into one command line argument. 
